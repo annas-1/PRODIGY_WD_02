@@ -1,0 +1,134 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-image: url('./images/stopwatch3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Elevation with smooth shadow */
+    backdrop-filter: blur(1px); /* Subtle blur for glassmorphism */
+    width: 400px;
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slight scale on hover for interaction */
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    color: #ffeb3b; /* Bright yellow for focus */
+    text-transform: uppercase;
+}
+
+#display {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.3); /* Transparent dark background */
+    color: #ffeb3b;
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Depth with shadow */
+    transition: background-color 0.3s;
+}
+
+#display:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Interactive hover on display */
+}
+
+.controls button {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft button shadows */
+}
+
+.controls button:hover {
+    transform: translateY(-3px); /* Lift on hover */
+}
+
+#startStop {
+    background-color: #28a745; /* Start button: Green */
+    color: white;
+}
+
+#reset {
+    background-color: #dc3545; /* Reset button: Red */
+    color: white;
+}
+
+#lap {
+    background-color: #007bff; /* Lap button: Blue */
+    color: white;
+}
+
+#laps {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background for laps */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+}
+
+#laps li {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#laps li:hover {
+    background-color: rgba(255, 235, 59, 0.7); /* Bright yellow lap hover */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffeb3b;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffc107; /* Darker scrollbar on hover */
+}
